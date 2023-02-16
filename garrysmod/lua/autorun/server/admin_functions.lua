@@ -5,6 +5,7 @@
 -----------------------------------------------------------]]
 local function KickId( player, command, arguments )
 
+	if ( !IsValid( player ) ) then return end
 	if ( !player:IsAdmin() ) then return end
 
 	local id = arguments[1]
@@ -23,6 +24,7 @@ concommand.Add( "kickid2", KickId, nil, "", { FCVAR_DONTRECORD } )
 -----------------------------------------------------------]]
 local function BanID( player, command, arguments )
 
+	if ( !IsValid( player ) ) then return end
 	if ( !player:IsAdmin() ) then return end
 
 	local length 	= arguments[1]
